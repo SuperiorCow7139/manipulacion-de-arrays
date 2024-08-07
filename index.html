@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulacion de Arrays</title>
+</head>
+<body>
+    <p>Como declarar un array</p>
+    <h4 id="declarar_arrays"></h4>
+    <hr>
+
+    <br>
+    <p>Como obtener el primer elemento de un array</p>
+    <h4 id="acceder_primer_elemento"></h4>
+    <hr>
+    <br>
+
+    <p>Como obtener el elemento n de un array</p>
+    <h4 id="acceder_tercer_elemento"></h4>
+    <hr>
+    <br>
+
+    <p>Obtener la longitud de un array</p>
+    <h4 id="ver_longitud"></h4>
+    <hr>
+    <br>
+
+    <p>Como crear un bucle de un array</p>
+    <h4 id="bucle_array"></h4>
+    <hr>
+    <br>
+
+    <p>Como agregar un elemento al final de un array</p>
+    <h4 id="elemento_final"></h4>
+    <hr>
+    <br>
+
+    <p>Como ordenar un array de tipo string o cadena</p>
+    <h4 id="array_ordenado"></h4>
+    <hr>
+    <br>
+
+    <p>Como revertir el orden de un array</p>
+    <h4 id="revertido"></h4>
+    <hr>
+    <br>
+
+    <p>Como ordenar un array numerica</p>
+    <h4 id="ord_array_num"></h4>
+    <hr>
+    <br>
+
+    <p>Obtener el numero maximo de un array</p>
+    <h4 id="num_maxim"></h4>
+    <hr>
+    <br>
+
+    <p>Obtener el numero minimo de un array</p>
+    <h4 id="num_minim"></h4>
+    <hr>
+    <br>
+
+
+
+</body>
+
+<script>
+    //Como se declara un array
+    var verduras = ["zanahoria", "papas", "cebolla"];
+    console.log(verduras);
+    document.getElementById("declarar_arrays").innerHTML = verduras;
+    //Como obtener el primer elemento de un array
+    var primer_elemento = verduras[0];
+    console.log(primer_elemento);
+    document.getElementById("acceder_primer_elemento").innerHTML = primer_elemento;
+
+    //Como obtener el tercer elemento de un array
+
+    var tercer_elemento = verduras[2];
+    console.log(tercer_elemento);
+    document.getElementById("acceder_tercer_elemento").innerHTML = tercer_elemento;
+
+    //Como obtener la longitud de un array
+
+    var longitud = verduras.length;
+    console.log(longitud);
+    document.getElementById("ver_longitud").innerHTML = longitud;
+
+    //Como imprimir un array a manera de lista "Bucle de un array"
+    var valor_array = "";
+    for (i = 0; i < verduras.length; i++) {
+        valor_array = valor_array + verduras[i] + "<br>"
+        console.log(verduras[i])
+    }
+
+    
+    document.getElementById("bucle_array").innerHTML = valor_array;
+
+    //como agregar un elemento al final de un array
+
+    verduras.push("pepino");
+    document.getElementById("elemento_final").innerHTML = verduras;
+
+    //Como ordenar un array de tipo string o cadena
+
+    var alfabeto = ["z", "k", "a", "m", "e"]
+    console.log(alfabeto);
+
+    var alfabeto_ordenado = alfabeto.sort();
+    document.getElementById("array_ordenado").innerHTML = alfabeto_ordenado;
+
+    //Como revertir el orden de un array
+    var revertido = alfabeto_ordenado.reverse();
+    document.getElementById("revertido").innerHTML = revertido;
+
+    //Como ordenar un array numerico
+    var array_num = [2, 8, 15, 6, 8, 1]
+    
+    var num_ordenado = array_num.sort();
+    document.getElementById("ord_array_num").innerHTML = num_ordenado;
+
+    //Obtener el numero maximo de un array
+    var num_max = Math.max.apply(Math, array_num);
+    document.getElementById("num_maxim").innerHTML = num_max;
+
+    //Obtener el numero minimo de un array 
+    var num_min = Math.min.apply(Math, array_num);
+    document.getElementById("num_minim").innerHTML = num_min;
+
+
+</script>
+</html>
